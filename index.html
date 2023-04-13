@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Fip calculator app</title>
+    </head>
+    <body>
+        <!--logo pic-->
+        <header>
+            <img src="images/logo.svg" alt="logo" class="logo" />
+        </header>
+
+        <!--main content-->
+        <main class="container">
+            <!--inputs section-->
+            <section class="inputs">
+                <!--here user enters the bill amount-->
+                <div class="bill">
+                    <div class="label">
+                        <label class="label-bill" for="inp-bill">Bill</label>
+                    </div>
+                    <div class="input-bill">
+                        <img src="images/icon-dollar.svg" class="icon"/>
+                        <input id="inp-bill" class="bill-inp input" type="number" placeholder="0.00" >
+                    </div>
+                </div>
+                <!--here user selects the tip percent to calculate-->
+                <div class="tip-percent">
+                    <div class="label">
+                        <label class="tip-label" for="tip-inp">Select Tip %</label>
+                    </div>
+                    <div class="tip-btns">
+                        <button class="btn">5%</button>
+                        <button class="btn">10%</button>
+                        <button class="btn active">15%</button>
+                        <button class="btn">25%</button>
+                        <button class="btn">50%</button>
+                    
+                        <input class="custom-tip-input input" id="tip-inp"
+                               type="number" placeholder="Custom"
+                               name="custom" >
+                    </div>
+                </div>
+                <!--here user enters the amount of people-->
+                <div class="people">
+                    <div class="label">
+                        <label for="people-inp" class="plp-label">Number of people</label>
+                        <label class="hidden error">Can't be zero</label>
+                    </div>
+                    <div class="people-input">
+                        <img src="images/icon-person.svg" class="icon" />
+                        <input id="people-inp" class="inp-people input"
+                              type="number" min="1"
+                              placeholder="0"  />
+                    </div>
+                </div>
+            </section>
+            <!--outputs section-->
+            <section class="outputs">
+                <!--here is the tip amount on per person-->
+                <div class="amountss">
+                <div class="amount">
+                    <p>Tip Amount<br><span>/ person</span></p>
+                    <div class="tip-amount">$0.00</div>
+                </div>
+                <!--here is the total bill amount on per person-->
+                <div class="amount">
+                    <p>Total<br><span>/ person</span></p>
+                    <div class="total-amount">$0.00</div>
+                </div>
+                </div>
+                <div class="last-btn">
+                <button class="reset">Reset</button>
+            </div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
